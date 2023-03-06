@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex12 조건문 - 키와 몸무케</title>
+</head>
+<body>
+
+    <script>
+
+        // 1. 키와 몸무게를 입력 받기.
+        // 2. 적정 몸무게 구하기.
+        // 3. 결과값 출력 --> 콘솔창
+        //     적정 체중은 00kg이며, 현재 적정 체중에서 00kg
+        //     초과한(미달인, 정상인) 것을 알 수 있습니다.
+
+        let height = Number(prompt("키를 입력 하세요"));
+        let weight = Number(prompt("몸무게를 입력하세요"));
+
+//        document.write(`신장 : ${height}cm `);
+//        document.write(`체중 : ${weight}kg  `);
+
+        document.write(`신장 : ${height}cm <br> 
+                        체중 : ${weight}kg <br>`);
+
+        let normal = (height - 100) * 0.9;
+//        document.write(`적정 체중 : ${normal}kg <br>`);
+        document.write(`적정 체중 : ${normal}kg = (${height}-100) * 0.9 <br>`);
+
+        // JS 절대값 구하기 : Math.abs()
+        let gap = Math.abs(weight - normal);
+
+        let result = '';
+
+        if(weight > normal) {
+            result = '초과한'
+        } else if (weight < normal) {
+            result = '미달한'
+        } else {
+            result = '정상인'
+        }
+
+        document.write(`결과 : 적정 체중은 ${normal}kg이며, 
+                    현재 적정 체중에서 ${gap}kg ${result}  것을 알 수 있습니다. <br>`);
+
+    </script>
+    
+</body>
+</html>
