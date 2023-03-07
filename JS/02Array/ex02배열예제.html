@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex02배열예제</title>
+</head>
+<body>
+
+    <script>
+        // 1. 23, 54, 78, 44 를 넣은 리스트를 생성하기.
+        // 2. 반복문을 이용해서 최대값 찾기
+        // 3. 결과 출력하기.
+
+        // 1. 23, 54, 78, 13, 44 를 넣은 리스트를 생성하기.
+        let numList = [23, 54, 78, 13, 44];
+        console.log(numList);
+
+        // 2. 반복문을 이용해서 최대값 찾기.
+        // 2-1. 비교할 대상을 잡아준다.
+        let maxNum = numList[0];
+        // 2-2. maxNum과 numList 값을 비교해서 최대값을 찾아준다.
+        for(let i = 1; i < numList.length; i++){
+            if(maxNum < numList[i]){
+                console.log(`change max ${maxNum} << ${numList[i]}, ${i}`)
+                maxNum = numList[i];
+            }
+        }
+        console.log(`${maxNum}`)
+
+        // 3. 결과 출력하기.
+        alert(`최대값 >> ${maxNum}`)
+
+    </script>
+    
+</body>
+</html>

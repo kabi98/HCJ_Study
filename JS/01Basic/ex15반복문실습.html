@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex15 반복문 실습</title>
+</head>
+<body>
+
+
+    
+    <script>
+        // 1. 랜덤한 수를 하나 뽑아준다.
+        // Math.random() : 0~1 사이의 난수를 생성
+        // 2. 사용자로부터 숫자를 입력 받아서,
+        //      -> 숫자 > 랜덤 '입력한 숫자 보다 작은 수입니다.'
+        //      -> 숫자 < 랜덤 '입력한 숫자 보다 큰 수입니다.'
+        //      -> 숫자 == 랜덤 '정답입니다. 축하합니다.!🐱‍👓 '
+
+        // 1. 랜덤한 수를 하나 뽑아준다.
+        let ranNum = Math.random();
+        console.log(`ranNum = ${ranNum}`);
+        ranNum = parseInt(ranNum * 100) + 1;
+        console.log(`intRan = ${ranNum}`);
+
+        // 2. 사용자로부터 숫자를 입력 받아서,
+        //      -> 숫자 > 랜덤 '입력한 숫자 보다 작은 수입니다.'
+        //      -> 숫자 < 랜덤 '입력한 숫자 보다 큰 수입니다.'
+        while (true) {
+            let inputNum = Number(prompt('숫자를 입력하세요.'));
+            if (inputNum > ranNum) {
+                alert(`입력한 숫자보다 작은 수 입니다.`);
+            } else if (inputNum < ranNum) {
+                alert(`입력한 숫자보다 큰 수 입니다.`);
+            } else {
+                alert(`정답입니다. 축하합니다.🐱‍👓`);
+                break;
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
