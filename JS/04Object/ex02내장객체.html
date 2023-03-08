@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ex02 내장 객체 </title>
+</head>
+<body>
+
+    <script>
+        let today = new Date();
+        let yesterday = new Date(2023, 2, 7, 0, 0, 0);
+        console.log(`오늘 : `, today);
+        console.log(`어제 : `, yesterday);
+
+        let tYear = today.getFullYear(); // 년
+        let tMonth = today.getMonth() + 1; // 월(0~11)
+        let tDate = today.getDate(); // 일
+        let tDay = today.getDay(); // 요일
+        let tHour = today.getHours(); // 시
+        let tMinute = today.getMinutes(); // 분
+        let tSecond = today.getSeconds(); // 시
+        let tDayList = ['일', '월', '화', '수', '목', '금', '토'];
+
+        // 출력 형태
+        // 0000년 00월 0요일
+        // 00시 00분 00초 입니다.
+
+        document.write(`${tYear}년 ${tMonth}월 ${tDate}일 ${tDayList[tDay]}요일 <br>
+            ${tHour}시 ${tMinute}분 ${tSecond}초<br>`)
+
+    </script>
+    
+</body>
+</html>

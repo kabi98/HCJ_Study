@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex02 더하기 실습</title>
+</head>
+<body>
+
+    <script>
+        let num1, num2;
+
+        num1 = Number(prompt("첫번째 정수 입력"));
+        console.log(`num1 : ${num1}`);
+
+        num2 = Number(prompt("두번째 정수 입력"));
+        console.log(`num2 : ${num2}`);
+
+        console.log(`함수 선언문 : add (${num1}, ${num2}) return ${addNumber(num1, num2)}`)
+
+        // 두 정수를 입력받아서 그 합을 구하는 함수를 만들어 보자
+        function addNumber(a, b) {
+            // 함수 호출시 실행될 로직 작성
+            return a+b;
+        }
+
+        let addNumber2 = function(a, b){
+            return a+b;
+        };
+
+        console.log(`함수 표현식 : add2(${num1}, ${num2}) return ${addNumber2(num1, num2)}`)
+
+        const addNumber3 = (a, b)=> a+b;
+        console.log(`화살표 함수 : add3(${num1}, ${num2}) return ${addNumber3(num1, num2)}`)
+
+    </script>
+    
+</body>
+</html>
