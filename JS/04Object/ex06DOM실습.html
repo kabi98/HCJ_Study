@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX06 DOM 실습</title>
+
+</head>
+<body>
+
+    <h1>클릭 한번 해볼까요?</h1>
+    <button onclick="h1Click()">h1태그 생성</button>
+    <button onclick="aClick()">a태그 생성</button>
+    <button onclick="ulClick()">ul태그 생성</button>
+    <!-- 생성된 태그를 누적할 공간 -->
+    <div id="container"></div>
+
+    <script>
+        // 1. 태그를 누적해줄 공간인 div 가지고 오기
+        let container = document.getElementById("container");
+        console.log(`요소 가져오기 : `, container);
+
+
+        // 2. 버튼 별로 가지고 온 div태그 안에 해당 태그 생성하기.
+        const h1Click = ()=>{
+            console.log(`h1Click : `, container);
+            container.innerHTML += '<h1>DOM 활용하기</h1>'
+        }
+
+        const aClick = ()=>{
+            console.log(`aClick : `, container);
+            container.innerHTML += '<a href="https://www.google.com/">Google로 이동</a>'
+        }
+
+        const ulClick = ()=>{
+            console.log(`ulClick : `, container);
+            container.innerHTML += 
+                `
+                <ul type="square">
+                    <li> HTML </li>
+                    <li> CSS </li>
+                    <li> JS </li>
+                </ul>
+                `
+        }
+
+
+    </script>
+
+</body>
+</html>

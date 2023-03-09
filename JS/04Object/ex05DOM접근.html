@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id = "container">
+        <p id = "pTag"> Hello World !!!</p>
+        <p style = "display:none;"> Hidden Text !!!</p>
+    </div>
+    <button onclick="textClick()">TEXT</button>
+    <button onclick="htmlClick()">HTML</button>
+
+
+    <script>
+        // 1. div 요소에 접근하기.
+        let domVal = document.getElementById("container");
+        console.log(`요소 가져오기 : `, domVal)
+
+        // 2. text 버트 클릭시, 요소에서 가져오기.
+        // -> innerText, textContent
+        const textClick = ()=>{
+            // 태그에서 글씨만
+            console.log(`보이는 내용만 : `, domVal.innerText);
+            console.log(`숨겨진 내용까지 : `, domVal.textContent);
+
+        }
+
+        const htmlClick = ()=>{
+            console.log(`태그까지 :`, domVal.innerHTML);
+            domVal.innerHTML = '<h1>Java Script!!</h1>'
+        }
+
+
+    </script>
+
+    
+</body>
+</html>

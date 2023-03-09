@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img src="https://search3.kakaocdn.net/argon/0x200_85_hr/7Xt39nL8cLT" height="500px" alt="">
+    <br>
+
+    <button onclick="changeImage()"> 이미지변경 </button>
+
+    <script>
+        let src1 = "https://search3.kakaocdn.net/argon/0x200_85_hr/7Xt39nL8cLT";
+        let src2 = "https://search1.kakaocdn.net/argon/0x200_85_hr/KFzICMBnk3o";
+
+        const changeImage = ()=>{
+            let img = document.querySelectorAll('img')[0];
+            if(img.src == src1){
+                img.src = src2;
+            } else {
+                img.src = src1;
+            }
+        }
+    </script>
+    
+</body>
+</html>

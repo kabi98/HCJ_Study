@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+        }
+        #redBox{
+            background-color: red;
+        }
+        #blueBox{
+            background-color: blue;
+        }
+        #greenBox{
+            background-color: green;
+        }
+        #grayBox{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="redBox"></div>
+    <div id="blueBox"></div>
+    <div id="greenBox"></div>
+    <div id="grayBox"></div>
+    <button onclick="moveFunc()">이동하기</button>
+    <button onclick="roundFunc()">둥글게</button>
+
+    <script>
+        let listBox = document.querySelectorAll('div');
+        console.log(listBox);
+
+        const moveFunc = ()=>{
+            for(let i=0; i<listBox.length; i++){
+                listBox[i].style.marginLeft = `${i*200}px`;
+            }
+        }
+
+        const roundFunc = ()=>{
+            for(let i=0; i<listBox.length; i++){
+                listBox[i].style.borderTopRightRadius = '50%';
+                listBox[i].style.borderBottomLeftRadius = '50%';
+            }
+        }
+
+/*        
+        let red = document.getElementById('redBox');
+        let blue = document.getElementById('blueBox');
+        let green = document.getElementById('greenBox');
+        let grey = document.getElementById('grayBox');
+
+        let box = [];
+        box.push(red);
+        box.push(blue);
+        box.push(green);
+        box.push(grey);
+
+        const moveFunc = ()=>{
+            for(let i=0; i<box.length; i++){
+                box[i].style.marginLeft = `${i*200}px`;
+            }
+        }
+
+        const roundFunc = ()=>{
+            for(let i=0; i<box.length; i++){
+                box[i].style.borderTopRightRadius = '50%';
+                box[i].style.borderBottomLeftRadius = '50%';
+            }
+        }
+*/        
+    </script>
+</body>
+</html>

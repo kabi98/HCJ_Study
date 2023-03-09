@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex08 input 실습</title>
+</head>
+<body>
+
+    <h1>Collection</h1>
+    <ul type="square">
+        <li> 아이유 </li>
+        <li> 이종석 </li>
+        <li> 강규남 </li>
+    </ul>
+
+    <button onclick="btnClick()">Click!</button>
+    <div id="container"></div>
+
+    <script>
+        let listLi = document.getElementsByTagName("li");
+
+        const btnClick = ()=>{
+            console.log(`btnClick`, listLi);
+
+            for(let i =0; i< listLi.length; i++){
+                console.log(`btnClick`, listLi[i].innerText);
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
